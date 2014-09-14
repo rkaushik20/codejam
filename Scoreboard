@@ -1,0 +1,14 @@
+def solve(c,i,p,x):
+	for k in xrange(i):
+		for j in xrange(k+1,i):
+			if p[k]+p[j]==c:
+				return "Case #%i: %i %i" %(x,k+1,j+1)
+
+
+i=input()
+for x in xrange(i):
+	c=input()
+	i=input()
+	p=raw_input()
+	p=map(int,p.split())
+	print solve(c,i,p,x+1)
